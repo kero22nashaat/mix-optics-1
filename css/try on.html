@@ -1,0 +1,915 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1.0 , minimum-scale=1.0 , maximum-scale=1.0" />
+
+
+<title>Magic Mirror</title>
+<meta charset='utf-8' />
+
+
+
+	<link rel="shortcut icon" href="../images/Download-Sunglasses%20-%20Copy.png">
+	<link rel="stylesheet"href= "../css/bootstrap.min.css"  id="bootstrap-css" />
+	<link rel="stylesheet" href="../css/bootstrap.css" />
+	
+	
+	
+	    <link rel="stylesheet" href="..css/hover.css"/> 
+
+   <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
+	<link  rel="stylesheet" href="../css/animate.css" />
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	 <script src="../js/bootstrap.min.js"></script>
+	
+	
+
+	<style>
+		
+		
+			.navbar  .navbar-brand {font-size:26px; font-weight:bolder; }
+
+.navbar .navbar-brand  span sub {
+	color:aqua;border-top: 4px solid blue;
+	border-bottom: 4px solid blue; width: 200px; 
+}
+.breadcrumb-holder {background-color: blue}
+.breadcrumb {padding:10px 0; margin: 0}
+	#myNavbar ul li a:hover {color:aqua}
+	#myNavbar ul li a {
+		margin-left: 30px;
+		 font-size: 15px;
+	color:white ;
+	padding:15px;
+	}
+
+body {
+	height: 4000px;
+	background-color:#888;
+}
+
+
+		body {
+		background-color: burlywood;
+			
+			height: 1300px;
+		}
+	
+			
+				
+		.footer {
+background-color: #191E22;
+	color: #6AAE71 ;
+	padding: 20px 0 ; 
+	text-align: center;
+overflow: hidden;
+margin-top: 1300px;	
+
+}    
+.footer span {margin-top:-5px;}
+
+.footer ul {
+	list-style: none;
+	padding-left: 0;
+    padding-top: 2px;
+	margin-top: 5px;margin-bottom: 10px;
+
+}
+.footer ul li a {text-decoration: none;}
+.footer ul li {
+	display:inline-block;
+		
+}
+.footer #facebook
+{
+	 background: #3b5998 ;
+			color: white;
+    padding:10px;
+    border-radius: 50%;
+			cursor: pointer;
+}
+.footer #youtube
+{
+	 background:#c4302b;
+			color:white;
+    padding:5px;
+    border-radius: 50%;
+				cursor: pointer;
+}
+.footer #linkedin
+{
+    background:#0e76a8 ;
+			color:white;
+    padding:5px;
+    border-radius: 50%;
+				cursor: pointer;
+}
+.footer #googleplus{
+	background: #db4a39;
+			color:white;
+    padding:5px;
+    border-radius: 50%;
+				cursor: pointer;
+}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</style>
+	 
+	<script src="../js/mix.js"> </script>
+	</head>
+
+
+<body>
+	<script src="../js/mix.js"> </script>
+	
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand hvr-grow-rotate" href="#"><sup>مركز</sup> ميكس <span> <sub> البصريات</sub></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="H:/project%20web/projects/mix%20optics/index.html#conya"> اتصل بنا <i class="fa fa-phone"></i> </a></li>
+        
+		  <li><a href="H:/project%20web/projects/mix%20optics/index.html#our-skills text-center">   احدث الاجهزة     <span class="glyphicon glyphicon-tree-deciduous"> </span>                         </a>    </li>
+		  
+        <li><a class="hvr-grow-rotate"href="H:/project%20web/projects/mix%20optics/index.html#protfolios">الصور <i class="fa fa-image"></i> </a></li>
+        <li><a href="H:/project%20web/projects/mix%20optics/index.html#abouts-me">نبذة عننا <span class="glyphicon glyphicon-user"></span></a></li>
+		  <li><a href="H:/project%20web/projects/mix%20optics/index.html#testimonials">الرئيسية <i class="fa fa-home fa-lg"></i>  </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	   
+
+	
+		<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;  "></p>
+<p style="margin-left:150px; margin-top: 190px; margin-bottom: -30px;" ><label for="file" style="cursor: pointer; position:relative; left: 250px; top: 150px; " ><i class="fa fa-camera fa-2x"></i> <input type="reset" onclick="function1()"style="font-size: 23px;">
+ <button type="button" onclick="zoomin()" > 
+       <i class="fa fa-search-plus fa-2x"></i>
+    </button> 
+      
+    <button type="button" onclick="zoomout()">  
+        <i class="fa fa-search-minus fa-2x"></i>
+    </button> 
+      
+</label></p>
+		
+	<img id = "draggable" width="250" height="250" style=" margin-left:350px; margin-top: 180px; opacity: 0.9; border: 2px solid #f00 ">
+	  
+	
+	<img src="../images/Daco_6926.png" id="product-image"  style="position:absolute; display: none; margin-left: 420px;top:500px; width:7%;cursor: move"class="dragme"GFG="250" alt="Geeksforgeeks">
+		
+		
+		<img src="../images/Download-Sunglasses.png" id="product-image1" style="position:absolute; display: none; margin-left:420px; top:500px; width:7%; cursor: move" class="dragme"GFG="250" alt="Geeksforgeeks">
+		<img src="../images/clipart95091.png" id="product-image2" style="position:absolute; display: none; margin-left:420px; top:500px; width:7%; cursor: move" class="dragme"GFG="250" alt="Geeksforgeeks">
+		<img src="../images/toppng.com-aviator-sunglasses-transparent-935x359.png" id="product-image3" style="position:absolute; display: none; margin-left:420px; top:500px; width:7%; cursor: move" class="dragme"GFG="250" alt="Geeksforgeeks">
+		<img src="images/PngItem_1445881.png" id="product-image4" style="position:absolute; display: none; margin-left:420px; top:500px; width:7%; cursor: move" class="dragme"GFG="250" alt="Geeksforgeeks">
+		<img src="../images/gk44.png" id="product-image5" style="position:absolute; display: none; margin-left:420px; top:500px; width:7%; cursor: move" class="dragme"GFG="250" alt="Geeksforgeeks">
+		
+			<img src="../images/gla55.png" id="product-image6" style="position:absolute; display: none; margin-left:420px; top:500px; width:7%; cursor: move" class="dragme"GFG="250" alt="Geeksforgeeks">
+				<img src="../images/pngguru.com.png" id="product-image7" style="position:absolute; display: none; margin-left:420px; top:500px; width:7%; cursor: move" class="dragme"GFG="250" alt="Geeksforgeeks">
+
+	
+	
+	
+		<div style="position: absolute;font-size: 19px; color: black; top:750px; left: 120px;"> choose:
+          <div style="margin-left: 10px; background-color: aqua; margin-bottom: 10px; border:2px solid #f00; position: absolute; top: 20px;left: 350px;"> <button type="button"  onclick="imageShow()" style="display:inline;margin-bottom: 5px;margin-left: 30px;margin-top: 2px; ">اخترالان </button>
+			<img src="../images/Daco_6926.png" height="90px" width="90px" style="margin-bottom: 5px ;margin-left: 20px; margin-top: 5px;margin-right: 10px; width: 130px;" >
+			 </div>
+			
+			
+          <div style="margin-left: 10px; background-color: aqua; margin-bottom: 10px; border:2px solid #f00; position: absolute; top: 350px;left: 350px;"> <button type="button"  onclick="imageShow6()" style="display:inline;margin-bottom: 5px;margin-left: 30px;margin-top: 2px; ">اخترالان </button>
+			<img src="../images/gla55.png" height="90px" width="90px" style="margin-bottom: 5px ;margin-left: 20px; margin-top: 5px;margin-right: 10px; width: 130px;" >
+			 </div>
+			
+			<!-- then make the new div top:350px;-->
+			<div style="margin-left: 10px; background-color: aqua; margin-bottom: 10px; border:2px solid #f00;position: absolute; top: 180px;left: 350px; ">
+          <button type ='button' onclick=" imageShow1()" style="display:inline;margin-bottom: 5px;margin-left: 30px;margin-top: 2px; ">اخترالان</button>
+				<img src="../images/Download-Sunglasses.png"height="90px" width="90px" style="margin-bottom: 5px ;margin-left: 20px; margin-top: 5px;margin-right: 10px; width: 130px;" > </div>
+			
+				<div style="margin-left: 10px; background-color: aqua; margin-bottom: 10px; border:2px solid #f00; ">
+          <button type='Button' onclick="imageShow2()" style="display:inline;margin-bottom: 5px;margin-left: 30px;margin-top: 2px; ">اختر الان </button>  
+					
+				<img src ="../images/clipart95091.png"height="90px" width="90px" style="margin-bottom: 5px ;margin-left: 20px; margin-top: 5px;margin-right: 10px; width: 130px;" >
+					
+			</div>
+			
+				<div style="margin-left: 10px; background-color: aqua; margin-bottom: 10px; border:2px solid #f00; ">
+	<button type='Button' onclick="imageShow3()"style="display:inline;margin-bottom: 5px;margin-left: 30px;margin-top: 2px; ">اختر الان </button>  
+		<img src="../images/toppng.com-aviator-sunglasses-transparent-935x359.png"height="90px" width="90px" style="margin-bottom: 5px ;margin-left: 20px; margin-top: 5px;margin-right: 10px; width: 130px;" >
+					
+			</div>
+			
+			
+				
+				<div style="margin-left: 10px; background-color: aqua; margin-bottom: 10px; border:2px solid #f00; ">
+          <button type='Button' onclick="imageShow4()" style="display:inline;margin-bottom: 5px;margin-left: 30px;margin-top: 2px; ">اختر الان </button>  
+					
+				<img src="../images/PngItem_1445881.png"	height="90px" width="90px" style="margin-bottom: 5px ;margin-left: 20px; margin-top: 5px;margin-right: 10px; width: 130px;" >
+					
+			</div>	<div style="margin-left: 10px; background-color: aqua; margin-bottom: 10px; border:2px solid #f00; ">
+          <button type='Button' onclick="imageShow5()" style="display:inline;margin-bottom: 5px;margin-left: 30px;margin-top: 2px; ">اختر الان </button>  
+					
+				<img src="../images/gk44.png"	height="90px" width="90px" style="margin-bottom: 5px ;margin-left: 20px; margin-top: 5px;margin-right: 10px; width: 130px;" >
+					
+			</div>
+			
+			
+			
+			<div style="margin-left: 10px; background-color: aqua; margin-bottom: 10px; border:2px solid #f00; ">
+          <button type='Button' onclick="imageShow7()" style="display:inline;margin-bottom: 5px;margin-left: 30px;margin-top: 2px; ">اختر الان </button>  
+					
+				<img src="../images/pngguru.com.png"	height="90px" width="90px" style="margin-bottom: 5px ;margin-left: 20px; margin-top: 5px;margin-right: 10px; width: 130px;" >
+					
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+       
+	
+	
+	
+	
+	
+	
+
+    <script type="text/javascript" src="../js/mix.js"> 
+      
+	
+    </script> 
+
+	
+<script>
+	
+	
+	
+	
+	
+	
+	</script>
+
+	
+<script>
+	
+	
+	
+	
+	
+	
+	
+	</script>	
+	
+
+
+	
+	
+	
+	<script>
+	
+	
+	 
+			
+		
+	</script>		 
+ 
+		 <script>
+	
+	
+	 
+	
+				  
+			  
+	
+	</script>		 
+		 
+		 
+		 
+		 <script>
+var loadFile = function(event) {
+	var image= document.getElementById('draggable');
+	
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+			
+ function zoomin() { 
+            var GFG = document.getElementById("product-image1"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth +15) + "px"; 
+			
+			
+			   var GFG = document.getElementById("product-image"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth +20) + "px"; 
+			  var GFG = document.getElementById("product-image2"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth +20) + "px"; 
+			 var GFG = document.getElementById("product-image3"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth +20) + "px"; 
+	  var GFG = document.getElementById("product-image4"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth +20) + "px"; 
+	  var GFG = document.getElementById("product-image5"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth +20) + "px"; 
+	  var GFG = document.getElementById("product-image6"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth +20) + "px"; 
+	  var GFG = document.getElementById("product-image7"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth +20) + "px"; 
+        } 
+          
+        function zoomout() { 
+            var GFG = document.getElementById("product-image1"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth - 15) + "px"; 
+			   var GFG = document.getElementById("product-image"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth -20) + "px"; 
+			  var GFG = document.getElementById("product-image2"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth -20) + "px"; 
+			 var GFG = document.getElementById("product-image3"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth -20) + "px"; 
+			 var GFG = document.getElementById("product-image4"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth -20) + "px"; 
+			 var GFG = document.getElementById("product-image5"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth -20) + "px"; 
+			 var GFG = document.getElementById("product-image6"); 
+            var currWidth = GFG.clientWidth; 
+         
+			GFG.style.width = (currWidth -20) + "px"; 
+        
+		
+		 var GFG = document.getElementById("product-image7"); 
+            var currWidth = GFG.clientWidth; 
+            GFG.style.width = (currWidth -20) + "px"; 
+		} 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			  
+		
+		 function function1(){
+		 
+		 
+		  document.getElementById("product-image").style.display = "none";      
+				  
+				   document.getElementById("product-image1").style.display = "none"; 
+		    document.getElementById("product-image2").style.display = "none";  
+	
+	 document.getElementById("product-image3").style.display = "none";  
+			 	 document.getElementById("product-image4").style.display = "none";  
+			 	 document.getElementById("product-image5").style.display = "none";  
+			 	 document.getElementById("product-image6").style.display = "none";  
+	 	 document.getElementById("product-image7").style.display = "none";  
+	 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function startDrag(e) {
+  // determine event object
+  if (!e) {
+    var e = window.event;
+  }
+
+  // IE uses srcElement, others use target
+  var targ = e.target ? e.target : e.srcElement;
+
+  if (targ.className != 'dragme') {
+    return
+  };
+  // calculate event X, Y coordinates
+  offsetX = e.clientX;
+  offsetY = e.clientY;
+
+  // assign default values for top and left properties
+  if (!targ.style.left) {
+    targ.style.left = '50px'
+  };
+  if (!targ.style.top) {
+    targ.style.top = '50px'
+  };
+
+		
+		
+		
+		
+  // calculate integer values for top and left 
+  // properties
+  coordX = parseInt(targ.style.left);
+  coordY = parseInt(targ.style.top);
+  drag = true;
+
+  // move div element
+  document.onmousemove = dragDiv;
+		 
+}
+
+function dragDiv(e) {
+  if (!drag) {
+    return
+  };
+  if (!e) {
+    var e = window.event
+  };
+  var targ = e.target ? e.target : e.srcElement;
+  // move div element
+  targ.style.left = coordX + e.clientX - offsetX + 'px';
+  targ.style.top = coordY + e.clientY - offsetY + 'px';
+  return false;
+}
+
+function stopDrag() {
+  drag = false;
+}
+window.onload = function() {
+  document.onmousedown = startDrag;
+  document.onmouseup = stopDrag;
+}
+
+
+	
+	 
+			  function imageShow(){
+				  "use strict";
+				  
+				   var x = document.getElementById("file");
+    var curVal = x.value;
+    var image = document.getElementById('draggable');
+    if (curVal == "") {
+	
+alert(" upload your photo first ");
+				  } else{
+				  
+				  
+				   document.getElementById("product-image3").style.display = "none";
+				   document.getElementById("product-image2").style.display = "none";   
+                    document.getElementById("product-image").style.display = "block";      
+				  				    	document.getElementById("product-image5").style.display = "none";
+	document.getElementById("product-image6").style.display = "none";
+	document.getElementById("product-image7").style.display = "none";
+  	document.getElementById("product-image4").style.display = "none";
+	
+				   document.getElementById("product-image1").style.display = "none";   
+                    }
+			  }
+		
+		
+	  function imageShow2(){
+				  "use strict";
+				  
+				   var x = document.getElementById("file");
+    var curVal = x.value;
+    var image = document.getElementById('draggable');
+    if (curVal == "") {
+	
+alert(" upload your photo first ");
+				  } else{
+				    document.getElementById("product-image2").style.display = "block";
+				  
+				  
+                    document.getElementById("product-image").style.display = "none";      
+				     document.getElementById("product-image1").style.display = "none";   
+					   document.getElementById("product-image3").style.display = "none";
+                    
+				  				    	document.getElementById("product-image5").style.display = "none";
+	document.getElementById("product-image6").style.display = "none";
+		document.getElementById("product-image7").style.display = "none";
+
+  	document.getElementById("product-image4").style.display = "none";
+	
+				  
+				  }
+			  }
+		
+	function imageShow3(){
+		
+		  "use strict";
+				  
+				   var x = document.getElementById("file");
+    var curVal = x.value;
+    var image = document.getElementById('draggable');
+    if (curVal == "") {
+	
+alert(" upload your photo first ");
+				  } else{
+				    document.getElementById("product-image3").style.display = "block";
+				  	document.getElementById("product-image7").style.display = "none";
+
+				   document.getElementById("product-image2").style.display = "none";
+                    document.getElementById("product-image").style.display = "none";      
+				     document.getElementById("product-image1").style.display = "none";  
+					    	document.getElementById("product-image5").style.display = "none";
+	document.getElementById("product-image6").style.display = "none";
+	
+  	document.getElementById("product-image4").style.display = "none";
+	
+					  
+                    }
+		
+	}
+		
+		
+
+
+			 
+			  function imageShow1(){
+				  "use strict";
+				
+  var x = document.getElementById("file");
+    var curVal = x.value;
+    var image = document.getElementById('draggable');
+    if (curVal == "") {
+	
+alert("upload your photo firstly");
+				  }else  {		
+					   document.getElementById("product-image3").style.display = "none";
+				   document.getElementById("product-image2").style.display = "none";   
+					 document.getElementById("product-image1").style.display = "block";     
+	document.getElementById("product-image").style.display = "none";
+				   	document.getElementById("product-image5").style.display = "none";
+	document.getElementById("product-image4").style.display = "none";
+	document.getElementById("product-image6").style.display = "none";
+ 
+				  	document.getElementById("product-image7").style.display = "none";
+
+				  }
+				  
+			  }
+				  
+			
+			 
+			  
+			  function imageShow4(){
+				  "use strict";
+				
+  var x = document.getElementById("file");
+    var curVal = x.value;
+    var image = document.getElementById('draggable');
+    if (curVal == "") {
+	
+alert("upload your photo firstly");
+				  }else  {		
+					   document.getElementById("product-image3").style.display = "none";
+				   document.getElementById("product-image2").style.display = "none";   
+					 document.getElementById("product-image1").style.display = "none";     
+	document.getElementById("product-image").style.display = "none";
+				document.getElementById("product-image4").style.display = "block";
+					  	document.getElementById("product-image5").style.display = "none";
+	document.getElementById("product-image6").style.display = "none";
+
+	document.getElementById("product-image7").style.display = "none";
+
+		   
+	
+			  }
+				  }
+				  
+				  
+			  function imageShow5(){
+				  "use strict";
+				
+  var x = document.getElementById("file");
+    var curVal = x.value;
+    var image = document.getElementById('draggable');
+    if (curVal == "") {
+	
+alert("upload your photo firstly");
+				  }else  {		
+					   document.getElementById("product-image3").style.display = "none";
+				   document.getElementById("product-image2").style.display = "none";   
+					 document.getElementById("product-image1").style.display = "none";     
+	document.getElementById("product-image").style.display = "none";
+				document.getElementById("product-image5").style.display = "block";
+					  	document.getElementById("product-image4").style.display = "none";
+	document.getElementById("product-image6").style.display = "none";
+
+
+		   	document.getElementById("product-image7").style.display = "none";
+
+	
+			  }
+				  }
+
+			 
+			 
+			 
+			 
+			 
+			 
+			 	  function imageShow6(){
+				  "use strict";
+				
+  var x = document.getElementById("file");
+    var curVal = x.value;
+    var image = document.getElementById('draggable');
+    if (curVal == "") {
+	
+alert("upload your photo firstly");
+				  }else  {		
+					   document.getElementById("product-image3").style.display = "none";
+				   document.getElementById("product-image2").style.display = "none";   
+					 document.getElementById("product-image1").style.display = "none";     
+	document.getElementById("product-image").style.display = "none";
+				document.getElementById("product-image5").style.display = "none";
+					  	document.getElementById("product-image4").style.display = "none";
+	document.getElementById("product-image6").style.display = "block";
+	
+
+	document.getElementById("product-image7").style.display = "none";
+
+		   
+	
+			  }
+				  }
+
+			 
+			 	  function imageShow7(){
+				  "use strict";
+				
+  var x = document.getElementById("file");
+    var curVal = x.value;
+    var image = document.getElementById('draggable');
+    if (curVal == "") {
+	
+alert("upload your photo firstly");
+				  }else  {		
+					   document.getElementById("product-image3").style.display = "none";
+				   document.getElementById("product-image2").style.display = "none";   
+					 document.getElementById("product-image1").style.display = "none";     
+	document.getElementById("product-image").style.display = "none";
+				document.getElementById("product-image5").style.display = "none";
+					  	document.getElementById("product-image4").style.display = "none";
+	document.getElementById("product-image6").style.display = "none";
+	document.getElementById("product-image7").style.display = "block";
+
+		   
+	
+			  }
+				  }
+
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function drag_start(event) {
+        var style = window.getComputedStyle(event.target, null);
+        event.dataTransfer.setData("text/plain",
+        (parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY));
+    } 
+    function drag_over(event) { 
+        event.preventDefault(); 
+        return false; 
+    } 
+    function drop(event) { 
+        var offset = event.dataTransfer.getData("text/plain").split(',');
+        var dm = document.getElementById('dragme');
+        dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
+        dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
+        event.preventDefault();
+        return false;
+    } 
+    var dm = document.getElementById('dragme'); 
+    dm.addEventListener('dragstart',drag_start,false); 
+    document.body.addEventListener('dragover',drag_over,false); 
+    document.body.addEventListener('drop',drop,false);
+		
+	
+
+
+
+
+
+
+
+
+
+	function allowDrop(ev) {
+     ev.preventDefault();
+}
+
+function drag(ev) {
+     ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+     ev.preventDefault();
+     var data = ev.dataTransfer.getData("draggable");
+     ev.target.appendChild(document.getElementById(data));
+}
+	
+
+	
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+</script>
+	
+
+<!--
+	<iframe src="https://mirror.virtooal.com/app/c30c8025cb572ebe46c23124101defb9/nasser@3dasatystore.com?c=000000&amp;c2=000000&amp;l=en&amp;cross=1&amp;model=13&amp;modelMale=18&amp;modelKids=undefined&amp;browse=false&amp;country=&amp;currency=&amp;sessionid=1627654999" id="virtooal-mirror" width="100%" height="355" scrolling="no" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" allow="camera" style="height: 785px;"></iframe>
+	-->
+
+	
+	
+	
+	
+	
+	
+
+
+
+
+<!-- Link to my website -->
+
+	
+	<script>
+  
+		
+		
+		
+    </script>
+	
+	
+	
+	<div class="pages" style="margin-top: 2600px;margin-left: 150px; font-size: 25px;">
+	<ul style="display: inline; list-style: none; ">
+		pages :
+		<li style="display: inline; border: 1px solid #fff;  font-size: 20px; margin-right: : 10px;"><a href="">1 </a>  </li>  &nbsp;
+		<li style="display: inline; border: 1px solid #fff;  font-size: 20px"> <a href="">2 </a></li>&nbsp;
+		<li style="display: inline; border: 1px solid #fff;  font-size: 20px"> <a href="">3 </a> </li>&nbsp;
+		<li style="display: inline;  border: 1px solid #fff; font-size: 20px"> <a href="">4 </a> </li>&nbsp;
+		<li  style="display: inline ; border: 1px solid #fff; font-size: 20px"><a href="">5 </a></li>&nbsp;
+		
+		</ul>
+	
+	
+	
+	
+	
+	</div>
+	
+	<div class="instruction"  style="margin-top:20px;">
+		<h1> كيفية تجرب النظارة علي وجهك؟؟؟ </h1>
+	<i class="fa fa-camera fa-2x"></i> اولا تقول برفع صورتك الشخصية بالضغط علي 
+	 <br> 
+		ثم تختار نوع النظارة من زر اختر الان  
+	<br> 
+		ثم نقوم تكبير وتصغير النظارة علي حسب وجهك من هذا الزر 
+		زر التكبير 
+	<i class="fa fa-search-plus fa-2x"></i> 
+		<br>
+			زر التصغير 
+
+	<i class="fa fa-search-minus fa-2x"></i> 
+	
+	</div>
+	
+	
+	
+	 <div class="footer"  >
+	<div class="container">
+	<span>  2020 &copy; جميع الحقوق محفوظة      </span>
+		<ul><li><a href="https://www.facebook.com/%D9%85%D9%8A%D9%83%D8%B3-%D9%84%D9%84%D8%A8%D8%B5%D8%B1%D9%8A%D8%A7%D8%AA-Mix-Optics-362882774155619/?ref=page_internal" class="fa fa-facebook fa-2x circle-icon" id="facebook"></a>    </li> 
+		    <li><a class="fa fa-youtube fa-2x circle-icon" id="youtube"></a>  </li>
+			  <li> <a class="fa fa-linkedin fa-2x circle-icon" id="linkedin"></a></li>
+			<li> <a class="fa fa-google-plus fa-2x circle-icon" id="googleplus"></a></li>
+		          </ul> 
+		   </div>
+		 </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
